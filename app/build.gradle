@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.jj.cryptotrack"
+        minSdkVersion 22
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.nex3z:toggle-button-group:1.1.2'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile(
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.6'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.6'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6']
+    )
+}
