@@ -33,7 +33,7 @@ import java.util.List;
 public class CryptoListActivity extends BaseAnimationActivity implements SearchView.OnQueryTextListener{
 
     boolean doubleBackToExitPressedOnce = false;
-    public static String IMAGE_URL_FORMAT = "https://files.coinmarketcap.com/static/img/coins/64x64/%s.png";
+    public static String IMAGE_FORMAT = "http://cryptoicons.co/32@2x/color/%s@2x.png";
     public final static String DAY = "24h";
     public final static String WEEK = "7d";
     public final static String HOUR = "1h";

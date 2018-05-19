@@ -74,7 +74,7 @@ public class CryptoListAdapter extends RecyclerView.Adapter<CryptoListAdapter.Vi
         }
         holder.currencyListfullNameTextView.setText(
                 String.format(this.symbolAndFullNameStringResource, item.getName(), item.getSymbol()));
-        Picasso.with(contextRef.get()).load(String.format(CryptoListActivity.IMAGE_URL_FORMAT, item.getId())).into(holder.currencyListCoinImageView);
+        Picasso.with(contextRef.get()).load(String.format(CryptoListActivity.IMAGE_FORMAT, item.getSymbol().toLowerCase())).into(holder.currencyListCoinImageView);
     }
 
     @Override
